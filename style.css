@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+       overflow: hidden;
+}
+.main{
+    height: 100%;
+    width: 100%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+ 
+
+}
+
+button{
+    padding: 1rem 2rem;
+    border-radius: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: red;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+}
+button:active{
+    scale: 0.9;
+}
+h1{
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+.quote {
+  position: absolute;
+  font-weight: 700;
+  opacity: 0;
+  transform-origin: center;
+  animation: readablePop 5s ease-out forwards;
+}
+
+@keyframes readablePop {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.9);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(0rem) scale(1);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-1rem) scale(1.05);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-1.6rem) scale(1.15) rotate(5deg);
+  }
+}
